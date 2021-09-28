@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  max-width: 800px;
+  
+  /* set font-size values as a function of vmin instead of vw or vh to also
+  cover landscape views */
+  font-size: calc(12px + ((24 - 12) * (100vmin - 320px)) / (800 - 320) );
+  
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+@media (min-width: 800px){
+  .App {
+    font-size : 24px;
+  }
+}
+
+
+
+
+.game-screen {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.game-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+}
+
+
+
+
+.game-button {
+  padding: 0.5rem 0;
+  border : none;
+  border-radius: 20em;
+  cursor: pointer;
+  background-color: #2a2d3a;
+  color: var(--game-bt-text-color);
+  font-size: large;
+  font-weight: 800; 
+  background: var(--game-bt-bg-color); 
+}
+
+
+.game-button:hover {
+  background-color: rgb(140, 185, 51);
+  background-color: #2f3241;
+  background:var(--game-bt-hover-bg); 
+  transform: scale(0.95)
+
+}
+
+
+

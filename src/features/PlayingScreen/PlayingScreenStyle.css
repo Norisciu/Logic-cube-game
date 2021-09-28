@@ -1,0 +1,71 @@
+.game-screen {
+      
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.menu{
+    width: 100%;
+    height: min-content;
+}
+.playing-screen-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+      
+}
+
+.menu--top-menu {
+    display: flex;
+    padding: 0 1em;
+    padding-top: 1em;
+    justify-content: space-around;
+      
+    align-items: center;
+    justify-content: end;
+      
+}
+
+.top-menu--label {
+      
+    color:whitesmoke;
+    background-color: #1b1a21;
+    background-color: #4e4e50c7;
+
+    padding: 1em;
+
+    background-color: var(--label-bg-color);
+    border : var(--label--border);
+    color: var(--label-text-color);
+
+
+    
+}
+
+.top-menu--label + .top-menu--label {
+    margin-left: 1em;
+}
+
+
+
+.pauseButton {
+    position: absolute;
+    border-radius: 0.25em;
+    width: 4em;
+    height: 4em;
+    top: 2em;
+    left : 8em;
+}
+
+
+@media screen and (max-height: 500px){
+    .top-menu--label {
+      font-size: calc(12px + ((15 - 12) * (100vmin - 320px)) / (500 - 320) );
+    }
+}

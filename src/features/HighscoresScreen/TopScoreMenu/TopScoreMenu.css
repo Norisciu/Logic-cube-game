@@ -1,0 +1,44 @@
+.game-menu {
+    margin: auto;
+}
+
+.game-menu--top-score {
+    color: whitesmoke;
+}
+
+.top-score--header {
+    margin-bottom: 0.25em;
+    font-size: 24px;
+}
+
+.top-score__image-replacer {
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+.top-score--trophy{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+.top-score__score {
+    font-size: xx-large;
+    margin-bottom : 1.5em;
+}
+
+
+/* rules for small screen landscape views */
+@media screen and (max-height: 500px){
+    .highscores-list{
+        font-size: calc(12px + ((15 - 12) * (100vmin - 320px)) / (500 - 320) );
+    }
+
+    .game-button-highscore-button {
+        font-size: 12px;
+        margin-bottom: 0.2em;
+    }
+}

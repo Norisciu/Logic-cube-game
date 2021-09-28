@@ -1,0 +1,27 @@
+
+.game-screen--highscores{
+    display: flex;
+}
+
+.highscores__container {
+    margin: auto;
+    width: 80%;
+}
+
+.highscores__header{
+    color: whitesmoke;
+}
+
+.controls--highscore-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls--highscore-screen .game-button{
+    margin-bottom: 1em;
+}
+
+.game-button-highscore-button{
+    width: 50%;
+}

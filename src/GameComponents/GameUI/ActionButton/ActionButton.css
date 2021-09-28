@@ -1,0 +1,28 @@
+.game-button--action{
+    display: flex;
+    border-radius: 0.4em;
+    background-color: #2347c9;
+    background-color: #2347c9;
+    width: 50px;
+    height: 50px;
+    color: rgb(216, 216, 216);
+    cursor: pointer;
+
+    border: none;
+    
+}
+
+.game-button--action:hover {
+    scale: 0.95;
+} 
+
+.game-button--action > * {
+    margin: auto;
+    
+}
+
+.game-button--action:disabled {
+    background-color: gray;
+    color:rgb(77, 75, 75);
+    cursor: pointer;
+}

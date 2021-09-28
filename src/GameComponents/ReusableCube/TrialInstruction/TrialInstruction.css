@@ -1,0 +1,67 @@
+.trial-statement{
+    font-size: 0.8em;
+    font-weight: 700;
+
+    font-size: 0.65em;
+
+}
+
+.unary-operator {
+    display:inline-block; 
+    width:100%;
+    text-transform: uppercase;
+}
+
+
+.binary-operator {
+    display:inline-block; 
+    width:100%
+}
+
+
+
+/* #e11500 , #0069ae , #00fb6a , #fc0 */
+
+.color--red {
+    color: crimson;
+    color:  #ec7063 ;
+    color : #f5432f ;
+    font-weight: 700;
+
+    color : var(--text-color-red);
+
+}
+
+.color--blue {
+    color: navy;
+    color:  #5dade2 ;
+    color: #0069ae;
+    color:lightskyblue;
+    font-weight: 700;
+
+    color : var(--text-color-blue);
+
+
+}
+
+.color--green {
+    color: lightgreen;
+    color:  #58d68d ;
+    color: #00fb6a;
+    font-weight: 700;
+
+    color : var(--text-color-green);
+    
+
+}
+
+.color--yellow {
+    color: gold;
+    color:  #f4d03f ;
+    color: rgb(255, 217, 67);
+    font-weight: 700;
+
+    color : var(--text-color-yellow);
+
+
+}

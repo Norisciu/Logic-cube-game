@@ -1,0 +1,38 @@
+.settings-screen {
+  color: whitesmoke;
+  text-align: left;
+}
+
+.game-menu--settings-screen {
+  color: whitesmoke;
+  width: 100%;
+}
+
+.screen-header {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.keyboard-settings {
+  margin-bottom: 1em;
+  margin: 0 auto 1em auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+}
+
+.row label {
+  margin-right: 1em;
+}
+
+.row input {
+  padding: 0.5em;
+}
+
+.error {
+  text-align: center;
+  width: 100%;
+}

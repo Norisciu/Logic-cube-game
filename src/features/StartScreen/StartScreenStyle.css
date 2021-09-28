@@ -1,0 +1,27 @@
+.start-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.button--menu-button {
+  padding: 1em 2.5em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.game-screen--start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-header {
+  font-size: 2.5em;
+  color: whitesmoke;
+}
+
+.game-menu.game-menu--start-screen {
+  /* overwrite .game-menu { margin: auto } */
+  margin: 0;
+}

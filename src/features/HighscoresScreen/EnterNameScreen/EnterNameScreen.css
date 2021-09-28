@@ -1,0 +1,14 @@
+.game-screen--enter-name{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.header--enter-name-screen{
+    margin-bottom: 1em;
+}
+
+.row--enter-name{
+    margin-bottom: 1em;
+}

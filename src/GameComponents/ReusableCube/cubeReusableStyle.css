@@ -1,0 +1,289 @@
+.cube-wrapper {
+    width: 200px;
+    height: 200px;
+    perspective: 900000px;
+    position:relative;
+      
+
+    width: 48vmin;
+    height: 48vmin;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+      
+
+    transition : transform ease-in 0.2s;    
+    text-align: center;
+    font-size: 24px;
+
+    transform: rotate3d(1, 1, 1, 45deg);
+
+  }
+  
+.cube__face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+      
+    font-weight: 500;
+    color:white;
+
+      
+      
+      
+    color : var(--face-text-color);
+    background-color: var(--face-bg-color);
+
+    border-radius: 0.5em;
+      
+
+      
+
+      
+    
+
+
+      
+    
+
+}
+
+.cube__face--front{
+      
+    transform:  translateZ(min(100px , calc(48vmin / 2)));   
+      
+
+}
+
+.cube__face--right{
+      
+    transform: rotateY(  90deg) translateZ(min(100px , calc(48vmin / 2)));
+      
+
+}   
+
+.cube__face--back{
+      
+    transform: rotateY(  180deg) translateZ(min(100px , calc(48vmin / 2)));
+      
+
+}   
+
+.cube__face--left{
+      
+    transform: rotateY(  -90deg) translateZ(min(100px , calc(48vmin / 2)));
+      
+
+    
+}
+
+.cube__face--top{
+      
+    transform: rotateX(  90deg) translateZ(min(100px , calc(48vmin / 2)));
+      
+
+    
+}
+
+.cube__face--bottom{
+      
+      
+      
+    transform: rotateX(  -90deg) translateZ(min(100px , calc(48vmin / 2)));
+
+
+
+}
+
+.cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
+.cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-100px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+
+
+
+
+.test-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.counter-border {
+    stroke: #793f3f;
+    stroke: #f0cf17;
+
+    stroke-width: 20;
+    stroke-width: 12;
+      
+      
+      
+    stroke: rgb(123, 200, 248);
+    stroke: #2c2c31;
+    stroke: #53b5c1;
+    stroke: #132042;
+    
+    stroke: var(--border-color);
+    
+    
+}
+
+.counter-fill {
+      
+      
+      
+    stroke-width: 20;
+    stroke-width: 12;
+      
+    stroke:inherit;
+    stroke: rgb(123, 200, 248);
+    stroke: #2c2c31;
+    stroke: #606369;
+    stroke: #2f3847;
+    stroke: #6b789d;
+
+    stroke: var(--fill-color);
+    
+}
+
+
+.trial-instruction {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    line-height: 0;
+    font-size: 19px;
+      
+    text-transform: uppercase;
+}
+
+.checkmark {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: green;
+    stroke-miterlimit: 10;
+    stroke-dashoffset: 0;
+    position:absolute;
+    width: 100%;
+    transition:transform 0.2s ease-in-out;
+    transform:scale(0);
+    z-index: 1;
+    top:-90px;
+  }
+
+.wrong {
+    width: 100%;
+    stroke-width: 5;
+    stroke: crimson;
+    position:absolute;
+    top: -50px;
+    transition:transform 0.2s ease-in-out;
+    transform:scale(0);
+    z-index: 1;
+}
+
+
+.correct-component-replacer{
+    width: 50px;
+    height: 50px;
+    position:absolute;
+    background-color: lightgreen;
+    border-radius: 50%;
+    transform: translate(50% , -50%);
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.cube-animation-rotating {
+    animation : cube-rotation 7s linear 0s infinite; 
+}
+
+.cube-animation-fall-above{
+    animation : fall-above 7s linear 0s; 
+}
+
+.fall-animation {
+      
+    animation: fall-from-above 1s cubic-bezier(.79,.14,.15,.86) 0s both;
+}
+
+.reverse-fall {
+    animation-direction: reverse;
+}
+
+.not-visible{
+    opacity: 0;
+}
+
+.is-upwards {
+    top : -100vh;
+}
+
+.no-transition {
+    transition: none;
+}
+
+
+.upwards{
+    top : -100vh;
+}
+
+@keyframes fall-from-above {
+    from {
+          
+        position: absolute;
+        top: -100vh;
+    }
+
+    to {
+          
+        top: 0;
+    }
+}
+
+@keyframes cube-rotation {
+    from {
+         
+       transform: rotate3d(0,1,0,0deg);
+       perspective: 90000px;
+
+    }
+
+    50%{
+        transform: rotate3d(0,1,0,20deg);
+        perspective: 90000px;
+    }
+
+    to {
+          
+       transform: rotate3d(0,1,0,740deg);
+       perspective: 90000px;
+
+
+    }
+}
+
