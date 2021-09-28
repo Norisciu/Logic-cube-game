@@ -13,6 +13,10 @@ import { setHighscoreScreenDefaults, saveScoreEntry } from "./highscoresSlice";
 export function HighscoresScreen() {
   const shouldShowEnterNameScreen = () => playerScore != 0;
   const isTopScore = () => {
+    if (!waitingPlayerScore) {
+      return false;
+    }
+
     let scores = allEntries.map(({ _, score }) => score);
     let allScores = scores.concat([playerScore]);
     allScores.sort((a, b) => b - a);
@@ -22,8 +26,8 @@ export function HighscoresScreen() {
   };
 
   const dispatch = useDispatch();
-  const playerScore = useSelector(
-    (state) => state.highscoresScreen.playerScore
+  const { playerScore, waitingPlayerScore } = useSelector(
+    (state) => state.highscoresScreen
   );
 
   const allEntries = useSelector((state) => state.highscoresScreen.scores);
